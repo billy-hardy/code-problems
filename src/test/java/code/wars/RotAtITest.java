@@ -14,7 +14,13 @@ import code.wars.RotAtI;
 @RunWith(Parameterized.class)
 public class RotAtITest {
 
-    public RotAtITest() {}
+    public int input;
+    public int expected;
+
+    public RotAtITest(int input, int expected) {
+        this.input = input;
+        this.expected = expected;
+    }
 
     @Parameters
     public static Collection<Object[]> data() {
@@ -24,7 +30,7 @@ public class RotAtITest {
     }
 
     @Test
-    public void testRotAtI(int input, int expected) {
+    public void testRotAtI() {
         RotAtI rotater = new RotAtI();
         int actual = rotater.exec(input);
         assertEquals(expected, actual);
