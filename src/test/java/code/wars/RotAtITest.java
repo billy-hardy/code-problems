@@ -27,7 +27,7 @@ public class RotAtITest {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-            {1,1}, {12, 21}, {123, 231}, {321, 321}, {1234, 2431}, {1000, 1000}
+            {1,1}, {12, 21}, {123, 231}, {321, 321}, {1234, 2431}, {1000, 1000}, {4321, 4321}, {4445, 4544}
         });
     }
 
