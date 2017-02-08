@@ -6,11 +6,14 @@ public class RotAtI {
         int max = num;
         String s = num + "";
         for(int i = 0; i < s.length()-1; i++) {
-            int next = Integer.parseInt(rotAtI(s, i));
-            if(next > max) {
-                max = next;
+            if(s.charAt(i) > s.charAt(i+1)){
+                return max;
             }
-            s = next + "";
+            s = rotAtI(s, i);
+            num = Integer.parseInt(s);
+            if(num > max) {
+                max = num;
+            }
         }
         return max;
     }
