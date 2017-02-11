@@ -27,7 +27,8 @@ public class ArrayFolderTest {
     @Parameters
     public static Collection<int[][]> data() {
         return Arrays.asList(new int[][][] {
-            {{1,2,3,4}, {5,5}}
+            {{1,2,3,4}, {5,5}},
+            {{1,2,3}, {4,2}}
         });
     }
 
