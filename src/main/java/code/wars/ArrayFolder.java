@@ -8,7 +8,7 @@ public class ArrayFolder {
             ret[i] = arr[i] + arr[arr.length-1-i];
         }
         if(arr.length%2 == 1) {
-            ret[ret.length] = arr[ret.length];
+            ret[ret.length-1] = arr[ret.length-1];
         }
         return ret;
     }
