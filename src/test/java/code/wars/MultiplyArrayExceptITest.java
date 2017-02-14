@@ -27,6 +27,7 @@ public class MultiplyArrayExceptITest {
     @Parameters
     public static Collection<int[][]> data() {
         return Arrays.asList(new int[][][] {
+            {{1,2}, {2,1}},
             {{1,2,3,4}, {24, 12, 8, 6}},
             {{0,1}, {1,0}}
         });
