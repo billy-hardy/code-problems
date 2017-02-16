@@ -29,6 +29,8 @@ public class StrobogrammaticTest {
         return Arrays.asList(new Object[][] {
             {1,true},
                {69, true},
+               {818, true},
+               {808, true},
                {4, false}
         });
     }
