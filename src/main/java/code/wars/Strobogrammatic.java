@@ -23,15 +23,16 @@ public class Strobogrammatic {
     }
 
     public boolean exec(String num) {
+        num = num.intern();
         if(num.length() == 0) {
             return true;
         }
         if(num.length() == 1) {
-            return num.equals("0") || num.equals("1") || num.equals("8");
+            return num == "0" || num == "1" || num == "8";
         }
-        String leftMost = num.substring(0, 1);
-        String rightMost = num.substring(num.length()-1);
-        if(this.mirror.get(leftMost).equals(rightMost)) {
+        String leftMost = num.substring(0, 1).intern();
+        String rightMost = num.substring(num.length()-1).intern();
+        if(this.mirror.get(leftMost) == rightMost) {
             return this.exec(num.substring(1, num.length()-1));
         }
         return false;
