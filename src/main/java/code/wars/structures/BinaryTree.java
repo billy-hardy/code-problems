@@ -13,14 +13,15 @@ public class BinaryTree {
         if(pow <= 0) {
             return 1;
         }
-        if(pow == 1) {
-            return base;
-        }
         return base*this.pow(base, pow-1);
     }
 
     public int log(int num) {
-        return (int) (Math.log(num)/Math.log(2));
+        int log = (int) (Math.log(num)/Math.log(2));
+        if((int) Math.pow(2, log+1) == num) {
+            return log+1;
+        }
+        return log;
     }
 
     public BinaryTree(Integer[] tree) {
