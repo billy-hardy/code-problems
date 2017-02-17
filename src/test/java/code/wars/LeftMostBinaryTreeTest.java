@@ -32,7 +32,9 @@ public class LeftMostBinaryTreeTest {
         TestCase<BinaryTree, Integer> second = new TestCase<BinaryTree, Integer>(new BinaryTree(input2), 4);
         Integer[] input3 = {1,2,3,4,5};
         TestCase<BinaryTree, Integer> third = new TestCase<BinaryTree, Integer>(new BinaryTree(input3), 4);
-        TestCase[] tests = {first, second, third};
+        Integer[] input4 = {1,2,3,4,null,5,null,null,null,null,null,6};
+        TestCase<BinaryTree, Integer> fourth = new TestCase<BinaryTree, Integer>(new BinaryTree(input4), 6);
+        TestCase[] tests = {first, second, third, fourth};
 
         return Arrays.asList(tests);
     }
